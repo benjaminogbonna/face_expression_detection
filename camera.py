@@ -3,8 +3,10 @@ import numpy as np
 import tensorflow as tf
 
 
-# model_1 = tf.keras.models.load_model('forth_model.h5')
-model_2 = tf.keras.models.load_model('model_7.h5')
+model_1 = tf.keras.models.load_model('forth_model.h5')
+model_2 = tf.keras.models.load_model('model_3.h5')
+
+# classes of face expression
 emotion_list = ["Angry", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise"]
 haarcascade = 'haarcascade_frontalface_default.xml'
 
