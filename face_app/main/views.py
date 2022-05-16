@@ -20,8 +20,7 @@ def index(request):
         file_url = default_storage.path(file_name)
         image = load_and_prep_image(file_url)        
         try:
-            pred = model.predict(image)
-            # prediction = emotion_list[int(np.argmax(pred))]
+            pred = model.predict(image)            
         except ValueError as e:
             prediction = 'An error occured, try again!'
         else:
@@ -32,3 +31,7 @@ def index(request):
         return render(request, 'index.html', context)
     else:
         return render(request, 'index.html')
+
+
+def camera(request):
+    return render(request, 'camera.html')

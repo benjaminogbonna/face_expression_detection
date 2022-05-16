@@ -8,6 +8,7 @@ function readURL(input){
     }
   }
 
+  // show choosen image before predicting
   document.getElementById('files').addEventListener('change', handleFileSelect, false)
   function handleFileSelect(evt){
       var files = evt.target.files;
@@ -15,15 +16,8 @@ function readURL(input){
       var reader = new FileReader();
       reader.onload = (function(thisFile){
           return function(e){
-              document.getElementById('list').innerHTML = ['<img src="', e.target.result, '"title="', thisFile.name, '" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" width="100%" />'].join('')
+              document.getElementById('list').innerHTML = ['<img src="', e.target.result, '"title="', thisFile.name, '" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />'].join('')
           };
       })(f);
       reader.readAsDataURL(f)
   }
-
-
-
-
-function Valid(event, input){
-    event.preventDefault();
-}
