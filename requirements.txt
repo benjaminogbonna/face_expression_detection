@@ -1,0 +1,6 @@
+Python
+Django
+Tensorflow
+Keras
+Opencv
+Numpy
